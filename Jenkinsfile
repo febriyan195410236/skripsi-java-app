@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('build image') {
             steps {
-                sh 'docker build -t app .'
+                sh 'docker build -t app --no-cache .'
             }
         }
         stage('push image') {
